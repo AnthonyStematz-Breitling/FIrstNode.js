@@ -1,0 +1,24 @@
+{
+  "name": "firstnode",
+  "version": "1.0.0",
+  "description": "ReadMe.md input generated command line application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyStematz-Breitling/FIrstNode.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyStematz-Breitling/FIrstNode.js/issues"
+  },
+  "homepage": "https://github.com/AnthonyStematz-Breitling/FIrstNode.js#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^7.3.3",
+    "util": "^0.12.3"
+  }
+}
