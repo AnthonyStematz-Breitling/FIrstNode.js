@@ -27,6 +27,12 @@ inquirer
         name: "Usage"
     },
     {
+        type:"checkbox",
+        message: "License:",
+        choices:["MIT", "GPlv3", "AGPL"],
+        name: "License"
+    },
+    {
         type:"input",
         message: "Contribution Guidelines:",
         name: "Contributing"
