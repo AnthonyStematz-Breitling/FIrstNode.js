@@ -4,11 +4,11 @@ Writing template for Node.js good readme.md application
 ## Description
 
 ## Table of Contents
-* Installation
-* Usage()
-* License() 
-* Contributing()
-* Tests()
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license) 
+* [Contributing](#contributing)
+* [Tests](#tests)
 * [Questions](#questions)
 
 
