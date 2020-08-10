@@ -9,7 +9,7 @@ Writing template for Node.js good readme.md application
 * License() 
 * Contributing()
 * Tests()
-* [Questions](## Questions)
+* [Questions](## questions)
 
 
 ## Installation
