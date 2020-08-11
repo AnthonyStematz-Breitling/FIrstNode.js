@@ -1,10 +1,13 @@
+//requires the dependencies of application
 const inquirer = require("inquirer")
 const fs = require("fs")
 const util = require("util")
 const { title } = require("process")
 
+//changes fs.writeFile into a promise oriented object
 const writeFileAsync = util.promisify(fs.writeFile)
-//TODO ADD GITHUB LINK THROUGH USERNAME
+
+//creates prompts inside terminal
 inquirer
     .prompt([
     {
@@ -58,27 +61,28 @@ inquirer
         name: "testing"
     },
     ]).then( response =>{
+    //uses the promise object to tell node do not to run this code until recieving the user inputs
         
+        //decontructs the response object
         let {title, description, installation, usage, license, contributing, testing, github, email} = response
+        
+        //defines badge icon link to be used in readme based on user choice
         let badge = "" 
-        console.log(JSON.stringify(license))
         if(license == "MIT"){
             badge = "[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)"
-            console.log(badge)
         }
         else if(license == "GPlv3"){
             badge = "[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)"
-            console.log(badge)
         }
         else if(license == "AGPL"){
             badge = "[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)"
-            console.log(badge)
         }
-        console.log(badge)
-      
+
+ //most of the readme.md is to the left to prevent extra spaces  
+ //writes the readme.md file using template literals to input user data  
         writeFileAsync("README.md",
         `# ${title}          ${badge}       
-        
+       
 ## Description
 ${description}
 
