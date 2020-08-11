@@ -9,7 +9,7 @@ inquirer
     {
         type:"input",
         message: "What is the Project Title?",
-        name:"name"
+        name:"title"
     },
     {
         type:"input",
@@ -52,4 +52,54 @@ inquirer
         message: "Test Instructions:",
         name: "testing"
     },
-    ])
+    ]).then( response =>{
+        let badge 
+        switch(response.license){
+        case "MIT":
+            badge = `[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)`
+        break
+        case "GPlv3":
+            badge = `[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)`
+        break
+        case "AGPL":
+            badge = '[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)'
+        break
+        
+    }
+        writeFileAsync("ReadMe.md",
+        `# ${title}     ${badge}            
+
+        ## Description
+        ${description}
+
+        ## Table of Contents
+        * [Installation](#installation)
+        * [Usage](#usage)
+        * [License](#license) 
+        * [Contributing](#contributing)
+        * [Tests](#tests)
+        * [Questions](#questions)
+        
+        
+        ## Installation
+        ${installation}
+        
+        
+        ## Usage
+        ${usage}
+        
+        ## License 
+        ${license}
+        
+        ## Contributing
+        ${contributing}
+        
+        
+        ## Tests
+        ${testing}
+        
+        ## Questions
+        * ${github}
+        * ${email}
+        `)
+    })
