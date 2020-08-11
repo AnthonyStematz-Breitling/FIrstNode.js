@@ -78,40 +78,39 @@ inquirer
       
         writeFileAsync("README.md",
         `# ${title}          ${badge}       
+        
+## Description
+${description}
 
-        ## Description
-        ${description}
-
-        ## Table of Contents
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license) 
-        * [Contributing](#contributing)
-        * [Tests](#tests)
-        * [Questions](#questions)
+## Table of Contents
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [License](#license) 
+ * [Contributing](#contributing)
+ * [Tests](#tests)
+ * [Questions](#questions)
         
         
-        ## Installation
-        ${installation}
+## Installation
+${installation}
         
         
-        ## Usage
-        ${usage}
+## Usage
+ ${usage}
         
-        ## License 
-        ${license}
+ ## License 
+ ${license}
         
-        ## Contributing
-        ${contributing}
+ ## Contributing
+ ${contributing}
         
         
-        ## Tests
-        ${testing}
+## Tests
+ ${testing}
         
-        ## Questions?
-        * [${github}](github.com/${github})
-        * ${email}
+## Questions?
+* [${github}](github.com/${github})
+* ${email}
         
-        If you have any additional question feel free to message or email me.
-        `)
+ If you have any additional question feel free to message or email me.`)
     })
