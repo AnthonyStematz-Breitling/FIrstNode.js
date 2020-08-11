@@ -40,7 +40,11 @@ inquirer
     {
         type:"checkbox",
         message: "License:",
-        choices:["MIT", "GPlv3", "AGPL"],
+        choices:[
+            {message: "MIT", name:"MIT"},
+            {message: "GPlv3", name:"GPlv3"},
+            {message: "AGPL", name:"AGPL"}
+        ],
         name: "license"
     },
     {
@@ -57,22 +61,24 @@ inquirer
     
         let {title, description, installation, usage, license, contributing, testing, github, email} = response
         //TODO BADGE
-        let badge 
-        switch(response.license){
-            case "MIT":
+        let badge = "" 
+        console.log(JSON.stringify(license))
+        if(license == "MIT"){
             badge = "[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)"
             console.log(badge)
-        break;
-        case ["GPlv3"]:
-            badge = "[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)"
-        break;
-        case ["AGPL"]:
-            badge = "[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)"
-        break;
         }
-        //TODO ADDITIONAL INSTRUCTIONS ON HOW TO CONTACT IN QUESTIONS
+        else if(license == "GPlv3"){
+            badge = "[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)"
+            console.log(badge)
+        }
+        else if(license == "AGPL"){
+            badge = "[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)"
+            console.log(badge)
+        }
+        console.log(badge)
+    
         writeFileAsync("README.md",
-        `# ${title}                 
+        `# ${title}          ${badge}       
 
         ## Description
         ${description}
@@ -106,5 +112,7 @@ inquirer
         ## Questions?
         * ${github}
         * ${email}
+        
+        If you have any additional question feel free to message or email me.
         `)
     })
