@@ -13,33 +13,43 @@ inquirer
     },
     {
         type:"input",
+        message: "Github Username:",
+        name:"github"
+    },
+    {
+        type:"input",
+        message: "Email:",
+        name:"email"
+    },
+    {
+        type:"input",
         message: "Description:",
         name:"description"
     },
     {
         type:"input",
         message: "Installation Instructions:",
-        name: "Installation"
+        name: "installation"
     },
     {
         type:"input",
         message: "Usage Information:",
-        name: "Usage"
+        name: "usage"
     },
     {
         type:"checkbox",
         message: "License:",
         choices:["MIT", "GPlv3", "AGPL"],
-        name: "License"
+        name: "license"
     },
     {
         type:"input",
         message: "Contribution Guidelines:",
-        name: "Contributing"
+        name: "contributing"
     },
     {
         type:"input",
         message: "Test Instructions:",
-        name: "Testing"
+        name: "testing"
     },
     ])
