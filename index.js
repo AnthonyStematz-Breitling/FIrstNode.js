@@ -14,12 +14,12 @@ inquirer
     },
     {
         type:"input",
-        message: "Github Username:",
+        message: "What is your github username?",
         name:"github"
     },
     {
         type:"input",
-        message: "Email:",
+        message: "What is you email?",
         name:"email"
     },
     {
@@ -58,9 +58,8 @@ inquirer
         name: "testing"
     },
     ]).then( response =>{
-    
+        
         let {title, description, installation, usage, license, contributing, testing, github, email} = response
-        //TODO BADGE
         let badge = "" 
         console.log(JSON.stringify(license))
         if(license == "MIT"){
@@ -76,7 +75,7 @@ inquirer
             console.log(badge)
         }
         console.log(badge)
-    
+      
         writeFileAsync("README.md",
         `# ${title}          ${badge}       
 
@@ -110,7 +109,7 @@ inquirer
         ${testing}
         
         ## Questions?
-        * ${github}
+        * [${github}](github.com/${github})
         * ${email}
         
         If you have any additional question feel free to message or email me.
