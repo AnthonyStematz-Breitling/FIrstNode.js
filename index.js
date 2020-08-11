@@ -109,7 +109,7 @@ ${installation}
  ${testing}
         
 ## Questions?
-* [${github}](github.com/${github})
+* [${github}](https://github.com/${github})
 * ${email}
         
  If you have any additional question feel free to message or email me.`)

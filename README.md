@@ -30,7 +30,7 @@ instal npm firstnode
  open in gitbash or terminal and run node index.js
         
 ## Questions?
-* [AnthonyStematz-Breitling](github.com/AnthonyStematz-Breitling)
+* [AnthonyStematz-Breitling](https://github.com/AnthonyStematz-Breitling)
 * stembreit@gmail.com
         
  If you have any additional question feel free to message or email me.
